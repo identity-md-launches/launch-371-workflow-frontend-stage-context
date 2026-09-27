@@ -1,0 +1,29 @@
+{
+  "kind": "univ4_hook",
+  "hook": {
+    "contract": "AntiSniperDecayHook",
+    "constructorArgs": [
+      "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543"
+    ],
+    "permissions": [
+      "afterInitialize",
+      "beforeSwap",
+      "afterSwap",
+      "beforeSwapReturnDelta",
+      "afterSwapReturnDelta"
+    ]
+  },
+  "token": {
+    "contract": "SNIP",
+    "name": "Snipeproof",
+    "symbol": "SNIP",
+    "decimals": 18
+  },
+  "pool": {
+    "pairedCurrency": "0x0000000000000000000000000000000000000000",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336000"
+  },
+  "notes": "Sepolia native ETH/SNIP pool: currency0 is native ETH and currency1 is SNIP. initialPrice is decimal sqrtPriceX96, equal to 1000 * 2^96 (1,000,000 SNIP per ETH), matching the accepted local launch rehearsal with one-sided SNIP liquidity. SNIP has a zero-argument constructor; the hook takes only the specified PoolManager. getHookPermissions enables exactly the five listed flags; all others are false. Constructor validation requires low 14 address bits 0x10cc. Native pools record their own initialization block s. At elapsed block e < 1000, the input fee rate is 5000 - floor(4970 * e / 1000) bps; thereafter it is 30 bps, separately from the pool's 3000-pip LP fee. Both swap directions pay: exact input returns a positive specified delta floor(abs(amountSpecified) * rate / 10000) in beforeSwap; exact output returns a positive unspecified delta floor(poolInput * rate / (10000 - rate)) in afterSwap. Native partial fills revert with PartialFill. Swap callbacks mint ERC-6909 claims to the hook; permissionless burnFees redeems those claims to 0x000000000000000000000000000000000000dEaD through unlockCallback. Callbacks require the configured PoolManager. Initialization has no pool gate and liquidity callbacks are disabled. Pools whose currency0 is not native ETH receive zero hook deltas and no hook state changes. hookData is ignored. ABI exports are docs/abi/AntiSniperDecayHook.json and docs/abi/SNIP.json. This manifest describes the implementation; launch policy and signed artifact linkage are supplied separately by services."
+}
