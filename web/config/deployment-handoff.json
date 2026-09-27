@@ -1,0 +1,56 @@
+{
+  "chainId": 11155111,
+  "repoUrl": "https://github.com/identity-md-launches/launch-293-antisniperdecayhook",
+  "version": 1,
+  "launchId": "88a24c46-85d8-46f7-8055-9dff66cdbf41",
+  "manifest": {
+    "hook": {
+      "contract": "AntiSniperDecayHook",
+      "permissions": [
+        "afterInitialize",
+        "beforeSwap",
+        "afterSwap",
+        "beforeSwapReturnDelta",
+        "afterSwapReturnDelta"
+      ],
+      "constructorArgs": [
+        "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543"
+      ]
+    },
+    "kind": "univ4_hook",
+    "pool": {
+      "fee": 3000,
+      "tickSpacing": 60,
+      "initialPrice": "79228162514264337593543950336000",
+      "pairedCurrency": "0x0000000000000000000000000000000000000000"
+    },
+    "notes": "Sepolia native ETH/SNIP pool: currency0 is native ETH and currency1 is SNIP. initialPrice is decimal sqrtPriceX96, equal to 1000 * 2^96 (1,000,000 SNIP per ETH), matching the accepted local launch rehearsal with one-sided SNIP liquidity. SNIP has a zero-argument constructor; the hook takes only the specified PoolManager. getHookPermissions enables exactly the five listed flags; all others are false. Constructor validation requires low 14 address bits 0x10cc. Native pools record their own initialization block s. At elapsed block e < 1000, the input fee rate is 5000 - floor(4970 * e / 1000) bps; thereafter it is 30 bps, separately from the pool's 3000-pip LP fee. Both swap directions pay: exact input returns a positive specified delta floor(abs(amountSpecified) * rate / 10000) in beforeSwap; exact output returns a positive unspecified delta floor(poolInput * rate / (10000 - rate)) in afterSwap. Native partial fills revert with PartialFill. Swap callbacks mint ERC-6909 claims to the hook; permissionless burnFees redeems those claims to 0x000000000000000000000000000000000000dEaD through unlockCallback. Callbacks require the configured PoolManager. Initialization has no pool gate and liquidity callbacks are disabled. Pools whose currency0 is not native ETH receive zero hook deltas and no hook state changes. hookData is ignored. ABI exports are docs/abi/AntiSniperDecayHook.json and docs/abi/SNIP.json. This manifest describes the implementation; launch policy and signed artifact linkage are supplied separately by services.",
+    "token": {
+      "name": "Snipeproof",
+      "symbol": "SNIP",
+      "contract": "SNIP",
+      "decimals": 18
+    }
+  },
+  "contracts": [
+    {
+      "name": "SNIP",
+      "txHash": "0x8f942fa2c992a059341d8a9deee36d6c436d5f6efa15cf2642d540f84fd34615",
+      "abiHash": "38880b8e56d42ce900f744a7908c7139632a49f1c3f33385c64ceaed29d37bee",
+      "address": "0xcd1f5069fd28049469a5eb521a19a7e61dabfc6e",
+      "blockNumber": 11791437,
+      "creationCodeHash": "46f5675328c7d13a76143739f4174125c14cea0dfebcb557315c7ef402ff78d2"
+    },
+    {
+      "name": "AntiSniperDecayHook",
+      "txHash": "0x8f942fa2c992a059341d8a9deee36d6c436d5f6efa15cf2642d540f84fd34615",
+      "abiHash": "ae4eb61557cac201ca88f440d823f167a133fe718d5104eb5c4d234b3beac4db",
+      "address": "0xe7c1afc598d7878c8c81c7f23a977a52f4e190cc",
+      "blockNumber": 11791437,
+      "creationCodeHash": "85a36ae7ee08ced8e315237d8e47f3f7c71427309c4533e778f844db45058ac4"
+    }
+  ],
+  "sourceCommit": "199da407620fb5cd1ca0a33e17dd68c51775c11f",
+  "abiInstructions": "Build ABIs from this exact source commit; compare canonicalKeccak(abi) with abiHash. Verify deployed code on the stated chain before enabling transactions.",
+  "attestationHash": "dbe4ac0ae24c705cc7b7c798c55efab64b18b46fa4f78a3e424a9183469e6e01"
+}

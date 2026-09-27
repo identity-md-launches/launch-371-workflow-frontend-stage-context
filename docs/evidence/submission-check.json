@@ -1,0 +1,12 @@
+{
+  "exportBytes": 611712,
+  "scope": "PASS",
+  "dependencyCacheExclusion": "PASS",
+  "submodules": "none",
+  "browser": "PASS",
+  "bundleLimitBytes": 8388608,
+  "workerRepositoryCommit": "Unavailable: .git is read-only. Scratch snapshot is validation only.",
+  "changedFilesExcludingThisReport": 42,
+  "changedFileBytesExcludingThisReport": 2166103,
+  "snapshotBundleBytesExcludingThisReport": 1517026
+}

@@ -1,0 +1,5 @@
+
+> snipeproof-frontend@1.0.0 check:export
+> node scripts/check-export.mjs
+
+PASS: 6 assets, 608546 bytes; all hashes, pinned contract set, network, pool, ABI bindings, and relative entrypoint checked.

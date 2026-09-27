@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-27T07:00:05.021Z",
+  "mode": "Production export at /preview/ with real public RPC requests; disconnected; no wallet or transactions",
+  "pageErrors": [],
+  "failedRequests": [],
+  "consoleErrors": [],
+  "observed": [
+    "Updated at block 11,791,695Refresh data ↻",
+    "Current hook fee37.18%Charged on the swap inputBlocks until 0.3%742Based on blocks, not a timer",
+    "Pool spot price50,000,000 SNIP / ETHStateView read0.30% pool LP fee"
+  ],
+  "result": "PASS"
+}

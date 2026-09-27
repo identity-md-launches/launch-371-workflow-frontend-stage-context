@@ -1,0 +1,69 @@
+{
+  "date": "2026-09-27T07:05:22.685Z",
+  "urlShape": "/preview/",
+  "environment": "Headless Chromium; mocked public RPC and EIP-1193 wallet. No real signatures or broadcasts.",
+  "checks": [
+    "Missing wallet: recovery instructions, transactions unavailable.",
+    "Wallet rejection, wrong chain, 4902 → exact supplied add-chain parameters → switch again.",
+    "Buy: amount/balance/slippage validation, quote and minimum, simulation failure prevents signature, rejection recovery, native value, confirmed receipt.",
+    "Sell: exact-amount token then Permit2 approvals to configured spenders, 30-minute expiry, quote, zero native value, confirmed receipt.",
+    "Fee burns: acknowledgement gates both currency actions, simulation and receipt refresh, correct hook arguments.",
+    "Quote expires after 45 seconds; stale quote cannot be signed.",
+    "Both FeeCharged and FeesBurned logs decode, sort and render with currency units and explorer links.",
+    "Amount changes invalidate quote; external wallet disconnect resets account state.",
+    "No page overflow at 1440, 900, 800, 390, 320 CSS pixels, including expanded contract details.",
+    "200% root text enlargement reflows; this is not native browser zoom.",
+    "Reduced motion disables button transitions.",
+    "Axe automated WCAG A/AA scan: zero violations in desktop state.",
+    "Missing router code disables transactions with a visible deployment error.",
+    "RPC failures remain distinct from empty event history; stale-data alert and retry control shown.",
+    "Tampered ABI fails runtime canonical Keccak check before wallet initialization."
+  ],
+  "screenshots": [
+    "docs/evidence/desktop-quote.png",
+    "docs/evidence/mobile.png",
+    "docs/evidence/mobile-320.png",
+    "docs/evidence/keyboard-focus.png"
+  ],
+  "consoleErrors": [],
+  "resourceFailures": [],
+  "accessibility": [],
+  "focus": {
+    "tag": "A",
+    "text": "SSnipeproofLaunch observatory",
+    "outline": "rgb(48, 95, 186) solid 3px"
+  },
+  "contrast": [
+    {
+      "selector": "body",
+      "foreground": "rgb(24, 43, 36)",
+      "background": "rgb(247, 247, 242)",
+      "ratio": 13.86
+    },
+    {
+      "selector": ".intro-copy",
+      "foreground": "rgb(92, 102, 90)",
+      "background": "rgb(247, 247, 242)",
+      "ratio": 5.58
+    },
+    {
+      "selector": ".primary",
+      "foreground": "rgb(255, 255, 255)",
+      "background": "rgb(32, 61, 51)",
+      "ratio": 11.82
+    },
+    {
+      "selector": ".footnote",
+      "foreground": "rgb(92, 102, 90)",
+      "background": "rgb(247, 247, 242)",
+      "ratio": 5.58
+    },
+    {
+      "selector": ".metric-label",
+      "foreground": "rgb(92, 102, 90)",
+      "background": "rgb(247, 247, 242)",
+      "ratio": 5.58
+    }
+  ],
+  "result": "PASS"
+}

@@ -1,0 +1,44 @@
+
+> snipeproof-frontend@1.0.0 test
+> node --experimental-strip-types --test tests/*.test.ts
+
+TAP version 13
+# Subtest: fee boundaries match integer Solidity rounding
+ok 1 - fee boundaries match integer Solidity rounding
+  ---
+  duration_ms: 2.488276
+  type: 'test'
+  ...
+# Subtest: exact decimal input rejects rounding, scientific notation, nonpositive and overflow
+ok 2 - exact decimal input rejects rounding, scientific notation, nonpositive and overflow
+  ---
+  duration_ms: 1.265385
+  type: 'test'
+  ...
+# Subtest: both swap directions encode exact input, settlement cap and minimum output
+ok 3 - both swap directions encode exact input, settlement cap and minimum output
+  ---
+  duration_ms: 10.406302
+  type: 'test'
+  ...
+# Subtest: unknown chain offers exact add-chain parameters then retries switch
+ok 4 - unknown chain offers exact add-chain parameters then retries switch
+  ---
+  duration_ms: 0.664285
+  type: 'test'
+  ...
+# Subtest: wallet rejection does not trigger add-chain or another request
+ok 5 - wallet rejection does not trigger add-chain or another request
+  ---
+  duration_ms: 0.521726
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 447.150943

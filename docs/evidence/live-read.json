@@ -1,0 +1,103 @@
+{
+  "checkedAt": "2026-09-27T06:49:53.178Z",
+  "sourceCommit": "199da407620fb5cd1ca0a33e17dd68c51775c11f",
+  "scope": "Read-only public RPC checks. No transaction or signature submitted.",
+  "failures": [
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com",
+      "method": "eth_call",
+      "message": "{\"code\":3,\"message\":\"execution reverted\",\"data\":\"0x6190b2b00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "url": "https://rpc.sepolia.ethpandaops.io",
+      "method": "eth_call",
+      "message": "{\"code\":3,\"message\":\"execution reverted\",\"data\":\"0x6190b2b00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "url": "https://sepolia.rpc.sentio.xyz",
+      "method": "eth_call",
+      "message": "{\"code\":3,\"message\":\"execution reverted\",\"data\":\"0x6190b2b00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "chainId": 11155111,
+  "blockNumber": "11791645",
+  "code": [
+    {
+      "name": "SNIP",
+      "address": "0xcd1f5069fd28049469a5eb521a19a7e61dabfc6e",
+      "bytes": 1722
+    },
+    {
+      "name": "AntiSniperDecayHook",
+      "address": "0xe7c1afc598d7878c8c81c7f23a977a52f4e190cc",
+      "bytes": 5624
+    },
+    {
+      "name": "poolManager",
+      "address": "0xe03a1074c86cfedd5c142c4f04f1a1536e203543",
+      "bytes": 24009
+    },
+    {
+      "name": "universalRouter",
+      "address": "0x3a9d48ab9751398bbfa63ad67599bb04e4bdf98b",
+      "bytes": 19540
+    },
+    {
+      "name": "quoter",
+      "address": "0x61b3f2011a92d183c7dbadbda940a7555ccf9227",
+      "bytes": 5820
+    },
+    {
+      "name": "stateView",
+      "address": "0xe1dd9c3fa50edb962e442f60dfbc432e24537e4c",
+      "bytes": 3531
+    },
+    {
+      "name": "positionManager",
+      "address": "0x429ba70129df741b2ca2a85bc3a2a3328e5c09b4",
+      "bytes": 23877
+    },
+    {
+      "name": "permit2",
+      "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+      "bytes": 9152
+    }
+  ],
+  "poolId": "0xb914699d167d31cb4f356da3c0335393ff311089f9bbd0495df0dee85c239d45",
+  "views": {
+    "initialized": true,
+    "currentRate": "3967",
+    "startBlock": "11791437",
+    "blocksLeft": "792",
+    "poolManager": "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543",
+    "DEAD": "0x000000000000000000000000000000000000dEaD"
+  },
+  "slot0": [
+    "560227709747861399187319382274582",
+    177284,
+    0,
+    3000
+  ],
+  "decimals": 18,
+  "claims": {
+    "ETH": "0",
+    "SNIP": "0"
+  },
+  "quotes": [
+    {
+      "side": "buy",
+      "amount": "100000000000000",
+      "result": [
+        "2994176581855135983476",
+        "133446"
+      ]
+    },
+    {
+      "side": "sell",
+      "amount": "1000000000000000000",
+      "error": "An unknown RPC error occurred."
+    }
+  ],
+  "endpoint": "https://ethereum-sepolia-rpc.publicnode.com",
+  "result": "Read checks passed"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "snipeproof-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && vite build && node scripts/export.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "check:live": "node scripts/check-live.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "check:export": "node scripts/check-export.mjs"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "5.90.21",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "viem": "2.45.3",
+    "wagmi": "2.19.5"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.11.1",
+    "@playwright/test": "1.58.2",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.1.4",
+    "typescript": "5.9.3",
+    "vite": "7.3.1"
+  }
+}
