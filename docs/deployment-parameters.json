@@ -1,0 +1,25 @@
+{
+  "status": "proposed rehearsal parameters; no launch.json was supplied",
+  "chainId": 11155111,
+  "poolManager": "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543",
+  "tokenContract": "src/SNIP.sol:SNIP",
+  "tokenConstructorArgs": [],
+  "tokenName": "Snipeproof",
+  "tokenSymbol": "SNIP",
+  "tokenDecimals": 18,
+  "tokenSupply": "1000000000000000000000000000",
+  "hookContract": "src/AntiSniperDecayHook.sol:AntiSniperDecayHook",
+  "hookConstructorArgs": ["0xE03A1074c86CFeDd5C142C4F04F1a1536e203543"],
+  "hookFlags": "0x10cc",
+  "pool": {
+    "currency0": "0x0000000000000000000000000000000000000000",
+    "currency1": "factory-deployed SNIP address",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "sqrtPriceX96": "79228162514264337593543950336000",
+    "humanPriceSnipPerEth": "1000000",
+    "seedTickLower": -887220,
+    "seedTickUpper": 138120,
+    "seedSnipBudget": "900000000000000000000000000"
+  }
+}
